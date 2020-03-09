@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row flex-row flex-nowrap">
-      <div v-for="person in people" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div :key="person.name" v-for="person in people" class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card card-block">
           <img class="planet" :src="require('./assets/planets/moon.png')">
-          <p>{{ person }}</p>
+          <p>{{ person.name }}</p>
         </div>
       </div>
     </div>
@@ -16,7 +16,15 @@
         name: "Character",
         data() {
           return {
-            people: ['Luke Skywalker', 'Yoda', 'Darth Vader', 'Han Solo', 'Chewbacca', 'Princess Leia', 'R2-D2']
+            people: []
+          }
+        },
+        created() {
+          for(let i = 1; i<=10; i++) {
+            this.$http.get('https://swapi.co/api/people/' + i.toString()).then(function(data) {
+            this.people.push(data.body); 
+            console.log(this.people);
+            }) 
           }
         }
     }

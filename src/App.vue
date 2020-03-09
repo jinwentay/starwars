@@ -19,7 +19,6 @@ export default {
 </script>
 
 <style>
-  @import url(http://allfont.net/allfont.css?fonts=star-jedi);
   #app {
     font-family: 'Star Jedi', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -39,7 +38,7 @@ export default {
     font-family: Helvetica;
     font-weight: normal;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
   }
   .horz-cards {
     margin-top: 10%;
