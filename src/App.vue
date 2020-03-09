@@ -1,26 +1,26 @@
 <template>
   <div id="app">
-    <h1>May the force be with you</h1>
+    <h1>May The Force Be With You</h1>
     <div class="horz-cards">
-      <Profile></Profile>
+      <profile></profile>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  export default {
+    name: 'app',
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
     }
   }
-}
 </script>
 
 <style>
   #app {
-    font-family: 'Star Jedi', Helvetica, Arial, sans-serif;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
