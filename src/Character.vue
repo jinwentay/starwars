@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid">
     <div class="row flex-row flex-nowrap">
-      <div :key="person.name" v-for="(person, index) in people" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div :key="person.name" v-for="(person, index) in people" class="col-sm-6 col-md-4 col-lg-3">
         <div class="card card-block" @click="showModal = true; select(index);">
-          <img class="planet" :src="require('./assets/planets/moon.png')">
+          <img class="planet" :src="require('./assets/planets/p'+index.toString()+'.png')">
           <p>{{ person.name }}</p>
         </div>
       </div>
@@ -55,6 +55,7 @@
     /* box-shadow: 5px 10px black; */
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     transition: all 0.2s ease-in-out;
+    font-size: 23px;
   }
   .card::after {
     content: '';
@@ -79,13 +80,28 @@
 
   .planet {
     display: block;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   p {
     color: #000;
+  }
+
+  @media screen and (max-width: 1200px){
+    .card {
+      width: 250px;
+      height: 250px;
+      font-size: 20px;
+    }
+
+    .planet {
+      width: 150px;
+      height: 150px;
+    }
+    
   }
 
 </style>
