@@ -11,40 +11,33 @@
               <div class="modal-body">
                 <div class="info">
                     <i><font-awesome-icon icon="birthday-cake" size="lg"/></i>
-                    <span> Birth Year: {{ char.birth_year }}</span>
+                    <span>Birth Year: {{ char.birth_year }}</span>
                 </div>
                 <div class="info">
                     <i><font-awesome-icon icon="venus" size="lg"/></i>
-                    <span> Gender: {{ char.gender }}</span>
+                    <span>Gender: {{ char.gender }}</span>
                 </div>
                 <div class="info">
                     <i><font-awesome-icon icon="ruler" size="lg"/></i>
-                    <span> Height: {{ char.height }} cm</span>
+                    <span>Height: {{ char.height }} cm</span>
                 </div>
                 <div class="info">
                     <i><font-awesome-icon icon="weight" size="lg"/></i>
-                    <span> Mass: {{ char.mass }} kg</span>
+                    <span>Mass: {{ char.mass }} kg</span>
                 </div>
                 <div class="info">
                     <i><font-awesome-icon icon="adjust" size="lg"/></i>
-                    <span> Skin Colour: {{ char.skin_color }}</span>
+                    <span>Skin Colour: {{ char.skin_color }}</span>
                 </div>
                 <div class="info">
                     <i><font-awesome-icon icon="eye" size="lg"/></i>
-                    <span> Eye Colour: {{ char.eye_color }}</span>
+                    <span>Eye Colour: {{ char.eye_color }}</span>
                 </div>
                 <div class="info">
                     <i><font-awesome-icon icon="user-circle" size="lg"/></i>
-                    <span> Hair Colour: {{ char.hair_color }}</span>
+                    <span>Hair Colour: {{ char.hair_color }}</span>
                 </div>
               </div>
-
-              <!-- <div class="modal-footer">
-                default footer
-                <button class="modal-default-button" @click="$emit('close')">
-                OK
-                </button>
-              </div> -->
             </div>
           </div>
         </div>
@@ -60,11 +53,6 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-    i {
-        width: 22px;
-        text-align: center;
-        margin-right: 10px;
-    }
     button {
         width: 40px;
         height: 40px;
@@ -81,7 +69,6 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        /* display: table; */
         transition: opacity 0.3s ease;
         color: #0A1020;
     }
@@ -91,9 +78,6 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 10%;
-
-        /* display: table-cell; */
-        /* vertical-align: middle; */
     }
 
     .modal-container {
@@ -126,10 +110,11 @@
         padding: 10px;
         font-family: 'Oswald';
     }
-
-    /* .modal-default-button {
-        float: right;
-    } */
+    .info>i {
+        width: 22px;
+        text-align: center;
+        margin-right: 10px;
+    }
 
     .modal-enter {
         opacity: 0;

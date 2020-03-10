@@ -13,26 +13,27 @@
 </template>
 
 <script>
-    export default {
-        name: "character",
-        data() {
-          return {
-            people: [],
-            showModal: false,
-            selectedPerson: 0
-          }
-        },
-        methods: {
-          select(index) {
-            this.selectedPerson = index;
-          }  
-        },
-        created() {
-          this.$http.get('https://swapi.co/api/people/').then(function(data) {
-            this.people = data.body.results;
-          })
-        }
+  export default {
+    name: "character",
+    data() {
+      return {
+        people: [],
+        showModal: false,
+        selectedPerson: 0
+      }
+    },
+    methods: {
+      select(index) {
+        this.selectedPerson = index;
+      }  
+    },
+    created() {
+      const apiEndpoint = 'https://swapi.co/api/people/';
+      this.$http.get(apiEndpoint).then(function(data) {
+        this.people = data.body.results;
+      })
     }
+  }
 </script>
 
 <style scoped>
@@ -52,7 +53,6 @@
     width: 300px;
     height: 300px;
     text-align: center;
-    /* box-shadow: 5px 10px black; */
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     transition: all 0.2s ease-in-out;
     font-size: 23px;
@@ -100,8 +100,6 @@
     .planet {
       width: 150px;
       height: 150px;
-    }
-    
+    }  
   }
-
 </style>
