@@ -1,6 +1,6 @@
 # starwars
 
-> Website to display all the Starwars characters
+> Responsive website to display all the Starwars characters with VueJS.
 
 ## Build Setup
 
